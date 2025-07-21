@@ -5,8 +5,9 @@ interface UserProps {
 }
 
 const FetchPage = async() => {
-    
-    const res = await fetch("http://localhost:3000/api/users", {
+    const basePath = process.env.NODE_ENV === "production" ? "https://kv-first-nextjs.vercel.app" : "http://localhost:3000";
+
+    const res = await fetch(basePath, {
         next: {
             revalidate: 10 // Runs this very 10 second
         },
