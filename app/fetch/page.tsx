@@ -26,6 +26,7 @@ const FetchPage = async() => {
                     </li>
                 ))}
             </ul>
+            <img src="images/Khian_Icon_Logo.png"/>
         </>
     )
 }
