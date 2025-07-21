@@ -6,7 +6,12 @@ interface UserProps {
 
 const FetchPage = async() => {
     
-    const res = await fetch("https://jsonplaceholder.typicode.com/users");
+    const res = await fetch("https://jsonplaceholder.typicode.com/users", {
+        next: {
+            revalidate: 10 // Runs this very 10 second
+        },
+        // cache: "no-store" // Doesn't store data in the browser
+    });
     const users: UserProps[] = await res.json();
 
     return (
