@@ -9,6 +9,10 @@ const Paths = [
     Label: "Products",
     Path: "/product"
   },
+  {
+    Label: "Fetch",
+    Path: "/fetch"
+  },
 ]
 
 export default function Home() {
